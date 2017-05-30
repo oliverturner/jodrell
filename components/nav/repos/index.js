@@ -1,14 +1,18 @@
 import React from 'react'
 
-import {List, ListItem} from './components'
+import {List, Item} from './components'
+
+const ListItem = ({name, url, index}) => (
+  <Item>
+    <span>{index}.</span>
+    <a href={url}>{name}</a>
+  </Item>
+)
 
 export default ({edges}) => (
   <List>
     {edges.map(({node}, index) => (
-      <ListItem key={node.id}>
-        <span>{index + 1}. </span>
-        <a href={node.url}>{node.name}</a>
-      </ListItem>
+      <ListItem key={node.id} index={index + 1} {...node} />
     ))}
   </List>
 )
