@@ -1,0 +1,8 @@
+.vscode
+*.log
+
+.DS_Store
+.idea/
+.next/
+node_modules/
+flow-coverage/
