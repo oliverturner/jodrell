@@ -1,10 +1,17 @@
+// @flow
+
 import React from 'react'
 
 import {Container, Header, Body, Footer} from './components'
 import Search from './search'
 import Repos from './repos'
 
-export default ({data, loadMorePosts}) => {
+type Props = {
+  data: {viewer: Viewer, loading: boolean},
+  loadMorePosts: Function
+}
+
+const Layout = ({data, loadMorePosts}: Props): React$Element<*> => {
   const loaded = data.viewer && data.viewer.starredRepositories
 
   if (!loaded) {
@@ -39,3 +46,5 @@ export default ({data, loadMorePosts}) => {
     </Container>
   )
 }
+
+export default Layout

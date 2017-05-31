@@ -1,4 +1,5 @@
-import React from 'react'
+// @flow
+
 import {gql, graphql} from 'react-apollo'
 import {mergeDeepWithKey, concat} from 'ramda'
 
