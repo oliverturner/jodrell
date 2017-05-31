@@ -13,7 +13,14 @@
   "author": "Oliver Turner",
   "license": "ISC",
   "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-plugin-flow-react-proptypes": "3.2.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-env": "1.5.1",
+    "eslint": "3.19.0",
+    "eslint-plugin-flowtype": "2.34.0",
+    "eslint-plugin-react": "7.0.1",
+    "jest": "20.0.4",
     "jest-cli": "20.0.4"
   },
   "dependencies": {
@@ -30,5 +37,28 @@
     "styled-components": "2.0.0",
     "svg-sprite-loader": "3.0.3",
     "webpack": "2.6.1"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "no-console": 0
+    },
+    "plugins": [
+      "flowtype",
+      "react"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:flowtype/recommended"
+    ],
+    "globals": {
+      "Promise": true
+    }
   }
 }
