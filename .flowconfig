@@ -1,0 +1,16 @@
+[ignore]
+.*/__tests__/.*
+.*/node_modules/mitt/src/.*
+.*/node_modules/styled-components/.*
+.*/node_modules/babel-plugin-transform-react-remove-prop-types/src/.*
+
+[include]
+./node_modules
+./components
+./lib
+./pages
+
+[libs]
+_tools/flow
+
+[options]

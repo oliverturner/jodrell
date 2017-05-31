@@ -1,7 +1,15 @@
+// @flow
+
 import React from 'react'
 
-import {Main} from './components'
+import {Container} from './components'
 
-export default ({children}) => (
-  <Main>{children}</Main>
+type Props = {
+  children: React$Element<*>
+}
+
+const Main = ({children}: Props): React$Element<*> => (
+  <Container>{children}</Container>
 )
+
+export default Main
