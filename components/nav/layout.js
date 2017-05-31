@@ -5,6 +5,18 @@ import Search from './search'
 import Repos from './repos'
 
 export default ({data, loadMorePosts}) => {
+  const loaded = data.viewer && data.viewer.starredRepositories
+
+  if (!loaded) {
+    return (
+      <Container>
+        <Header />
+        <Body>Loading...</Body>
+        <Footer />
+      </Container>
+    )
+  }
+
   const {viewer, loading}   = data
   const {edges, totalCount} = viewer.starredRepositories
 
@@ -24,14 +36,6 @@ export default ({data, loadMorePosts}) => {
           : <button disabled>Done</button>
         }
       </Footer>
-    </Container>
-  )
-
-  return (
-    <Container>
-      <Header />
-      <Body>Loading...</Body>
-      <Footer />
     </Container>
   )
 }

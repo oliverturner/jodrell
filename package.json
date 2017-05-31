@@ -1,21 +1,8 @@
 {
   "name": "jodrell",
-  "version": "1.0.0",
   "description": "Gaze up at your (Github) stars",
-  "main": "index.js",
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "version": "1.0.0",
   "author": "Oliver Turner",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-preset-env": "1.5.1",
-    "jest-cli": "20.0.4"
-  },
   "dependencies": {
     "babel-plugin-styled-components": "1.1.4",
     "graphql": "0.10.1",
@@ -30,5 +17,50 @@
     "styled-components": "2.0.0",
     "svg-sprite-loader": "3.0.3",
     "webpack": "2.6.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-plugin-flow-react-proptypes": "3.2.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "babel-preset-env": "1.5.1",
+    "eslint": "3.19.0",
+    "eslint-plugin-flowtype": "2.34.0",
+    "eslint-plugin-react": "7.0.1",
+    "flow-bin": "0.47.0",
+    "jest": "20.0.4",
+    "jest-cli": "20.0.4"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "no-console": 0
+    },
+    "plugins": [
+      "flowtype",
+      "react"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:flowtype/recommended"
+    ],
+    "globals": {
+      "Promise": true
+    }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./components ./lib"
   }
 }
