@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 
 import {List, Item} from './components'
@@ -9,10 +11,16 @@ const ListItem = ({name, url, index}) => (
   </Item>
 )
 
-export default ({edges}) => (
+type Props = {
+  edges: Array<Edge>
+}
+
+const Repos = ({edges}: Props): React$Element<*> => (
   <List>
     {edges.map(({node}, index) => (
       <ListItem key={node.id} index={index + 1} {...node} />
     ))}
   </List>
 )
+
+export default Repos

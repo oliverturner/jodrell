@@ -1,7 +1,15 @@
+// @flow
+
 import React from 'react'
 
-import {Footer} from './components'
+import {Container} from './components'
 
-export default ({children}) => (
-  <Footer>{children}</Footer>
+type Props = {
+  children: React$Element<*>
+}
+
+const Footer = ({children}: Props): React$Element<*> => (
+  <Container>{children}</Container>
 )
+
+export default Footer
