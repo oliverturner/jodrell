@@ -8,7 +8,7 @@
       "options" : {
         "headers": {
           "user-agent" : "JS GraphQL",
-          "Authorization": "Bearer 5ade505cacbf49979b284e5c140ddf03400ed5bb"
+          "Authorization": "Bearer e509922789ce386602add7e29771a45f6d9b8a60"
         }
       }
     }
@@ -18,11 +18,12 @@
   "README_endpoints": "A list of GraphQL endpoints that can be queried from '.graphql' files in the IDE",
   "endpoints" : [
     {
-      "name": "Default (http://localhost:8080/graphql)",
-      "url": "http://localhost:8080/graphql",
+      "name": "Github API",
+      "url" : "https://api.github.com/graphql",
       "options" : {
         "headers": {
-          "user-agent" : "JS GraphQL"
+          "user-agent" : "JS GraphQL",
+          "Authorization": "Bearer e509922789ce386602add7e29771a45f6d9b8a60"
         }
       }
     }
