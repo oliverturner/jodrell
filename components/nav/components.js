@@ -10,7 +10,7 @@ export const Container = styled.div`
   background: lightblue;
   
   @media (min-width: 768px) {
-    grid-area: nav
+    grid-area: nav;
   }
 `
 

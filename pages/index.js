@@ -9,11 +9,9 @@ import Nav from '../components/nav'
 import Main from '../components/main'
 import Footer from '../components/footer'
 
-export default withData((props) => {
-  console.log('props:', props)
-
+const App = withData(() => {
   return (
-    <Layout>
+    <div>
       <Head>
         <title>Jodrell</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -40,11 +38,14 @@ export default withData((props) => {
           }
         `}</style>
       </Head>
-
-      <Header>Header</Header>
-      <Nav />
-      <Main>main</Main>
-      <Footer>footer</Footer>
-    </Layout>
+      <Layout>
+        <Header>Header</Header>
+        <Nav />
+        <Main>main</Main>
+        <Footer>footer</Footer>
+      </Layout>
+    </div>
   )
 })
+
+export default App
